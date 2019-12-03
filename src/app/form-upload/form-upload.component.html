@@ -1,0 +1,12 @@
+<form #regForm='ngForm' (ngSubmit)="upload(regForm.value)">
+  <label>Input your name</label>
+  <br/>
+  <input type="text" placeholder="Name" name="username" ngModel/>
+  <br/>
+  <label>Choose your avatar</label>
+  <br/>
+  <input type="file" (change)="selectFile($event)">
+  <br/>
+  <button type="submit" [disabled]="!selectedFiles">Upload</button>
+  <p *ngIf="currentFileUpload">File uploaded successfully!</p>
+</form>
