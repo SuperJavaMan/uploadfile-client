@@ -24,6 +24,7 @@ export class UploadService {
   getAllFiles() {
     return this.client.get(this.URL + '/person');
   }
+
 }
 
 
